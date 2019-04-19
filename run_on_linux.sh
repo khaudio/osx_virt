@@ -46,8 +46,8 @@ with open(filename, 'r') as xml:
 with open(filename, 'w') as xml:
     for line in lines:
         line = replace(
-                line, 'loader', ovmf_code
-                "readonly='yes' type='pflash'",
+                line, 'loader', ovmf_code,
+                "readonly='yes' type='pflash'"
             )
         line = replace(line, 'nvram', ovmf_vars)
         line = replace(line, 'name', 'Hackintosh')
